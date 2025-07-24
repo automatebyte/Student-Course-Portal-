@@ -8,7 +8,7 @@ import Navbar from './Components /Navbar'
 // Pages
 import Home from './Pages/Home'
 import Dashboard from './Pages/Dashboard'
-import Courses from './Pages/Courses'
+import Course from './Pages/Course'
 import CourseDetail from './Pages/CourseDetail'
 import Assignments from './Pages/Assignments'
 import Admin from './Pages/Admin'
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/courses" element={<Courses />} />
+          <Route path="/course" element={<Course />} />
           <Route path="/courses/:id" element={<CourseDetail />} />
           <Route path="/assignments" element={<Assignments />} />
           <Route path="/assignments/:id" element={<Assignments />} />
