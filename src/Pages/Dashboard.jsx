@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Dashboard() {
   // State variables to store different types of data
   const [studentData, setStudentData] = useState(null);  // Student's personal info
-  const [courses, setCourses] = useState([]);            // List of enrolled courses
+  const [course, setCourse] = useState([]);            // List of enrolled course
   const [assignments, setAssignments] = useState([]);    // List of assignments
   const [stats, setStats] = useState(null);             // Calculated statistics
   const [loading, setLoading] = useState(true);         // Shows loading spinner
