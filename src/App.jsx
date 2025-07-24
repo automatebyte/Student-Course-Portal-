@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 // Components
-import Navbar from './Components /Navbar'
+import Navbar from './Components/Navbar'
 // Pages
 import Home from './Pages/Home'
 import Dashboard from './Pages/Dashboard'
