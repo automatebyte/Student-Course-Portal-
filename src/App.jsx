@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 // Components
-import Navbar from './components/Navbar' // The navigation bar that appears on all pages
+import Navbar from './Components/Navbar' // The navigation bar that appears on all pages
 
 // Pages - these are the different views of our application
 import Home from './pages/Home'             // The landing page
