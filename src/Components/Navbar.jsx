@@ -5,7 +5,7 @@ function Navbar() {
   const location = useLocation();
   
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container">
         <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
           <i className="bi bi-mortarboard-fill me-2 text-primary"></i>

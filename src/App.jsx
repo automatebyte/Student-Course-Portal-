@@ -3,12 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 // Components
-import Navbar from './Components /Navbar'
+import Navbar from './Components/Navbar'
 
 // Pages
 import Home from './Pages/Home'
 import Dashboard from './Pages/Dashboard'
-import Courses from './Pages/Courses'
+import Courses from './Pages/Course'
 import CourseDetail from './Pages/CourseDetail'
 import Assignments from './Pages/Assignments'
 import Admin from './Pages/Admin'

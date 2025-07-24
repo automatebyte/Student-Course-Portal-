@@ -1,4 +1,3 @@
-/*
 // Import React hooks for managing state and side effects
 import { useState, useEffect } from 'react';
 // Import Link for navigation to individual course pages
@@ -107,4 +106,3 @@ function Courses() {
 
 // Export Courses component so it can be used in App.jsx
 export default Courses;
-*/
