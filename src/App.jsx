@@ -19,6 +19,7 @@ import Dashboard from './Pages/Dashboard' // Student's main dashboard with overv
 import Courses from './Pages/Course'      // List of all available courses
 import CourseDetail from './Pages/CourseDetail' // Detailed view of a single course
 import Assignments from './Pages/Assignments'   // List of all assignments
+import Assignment from './Pages/Assignment'     // Individual assignment view
 import Admin from './Pages/Admin'         // Admin panel for managing data
 
 /**
@@ -61,8 +62,8 @@ function App() {
           {/* Assignments list route - shows all assignments */}
           <Route path="/assignments" element={<Assignments />} />
           
-          {/* Individual assignment route - for future use */}
-          <Route path="/assignments/:id" element={<Assignments />} />
+          {/* Individual assignment route */}
+          <Route path="/assignments/:id" element={<Assignment />} />
           
           {/* Admin panel route - for managing the system */}
           <Route path="/admin" element={<Admin />} />

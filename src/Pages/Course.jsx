@@ -11,14 +11,10 @@ import { Link } from 'react-router-dom';
  * 
  * This component:
  * 1. Fetches course data from our JSON server when it loads
- * 2. Shows a loading spinner while data is being fetched
- * 3. Displays courses in responsive cards
- * 4. Handles errors if data fetching fails
  * 
  * State variables explained:
  * - courses: Array to store all course data from the server
- * - loading: Boolean to show/hide loading spinner
- * - error: String to store any error messages
+
  */
 function Courses() {
   // State to store the list of courses from the server
