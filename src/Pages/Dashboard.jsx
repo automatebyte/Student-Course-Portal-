@@ -55,7 +55,7 @@ function Dashboard() {
           coursesEnrolled: coursesData.length,
           assignmentsPending: upcomingAssignments.length,
           upcomingDeadlines: upcomingAssignments.length,
-          attendanceRate: 92 // Hardcoded for demo purposes
+          attendanceRate: 0 // Hardcoded for demo purposes
         });
         
         setLoading(false); // Hide loading spinner
