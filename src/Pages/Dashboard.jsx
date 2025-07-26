@@ -19,7 +19,7 @@ function Dashboard() {
     const fetchData = async () => {
       try {
         // Get student's personal information (ID = 1 for demo)
-        const studentResponse = await fetch('http://localhost:3001/students/1');
+        const studentResponse = await fetch(https://student-course-portal-seven.vercel.app/);
         if (!studentResponse.ok) {
           throw new Error('Failed to fetch student data');
         }
@@ -27,7 +27,7 @@ function Dashboard() {
         setStudentData(studentData);
         
         // Get all available courses
-        const coursesResponse = await fetch('http://localhost:3001/courses');
+        const coursesResponse = await fetch(https://student-course-portal-seven.vercel.app/');
         if (!coursesResponse.ok) {
           throw new Error('Failed to fetch courses');
         }
@@ -35,7 +35,7 @@ function Dashboard() {
         setCourses(coursesData);
         
         // Get all assignments
-        const assignmentsResponse = await fetch('http://localhost:3001/assignments');
+        const assignmentsResponse = await fetch(https://student-course-portal-seven.vercel.app/);
         if (!assignmentsResponse.ok) {
           throw new Error('Failed to fetch assignments');
         }
