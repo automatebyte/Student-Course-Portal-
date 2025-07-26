@@ -40,7 +40,7 @@ function Admin() {
     const fetchData = async () => {
       try {
         // Fetch all courses from backend API
-        const coursesResponse = await fetch(https://student-course-portal-seven.vercel.app/);
+        const coursesResponse = await fetch('http://localhost:3001/courses')
         if (!coursesResponse.ok) {
           throw new Error('Failed to fetch courses');
         }
@@ -48,7 +48,7 @@ function Admin() {
         setCourses(coursesData);
 
         // Fetch all assignments from backend API
-        const assignmentsResponse = await fetch(https://student-course-portal-seven.vercel.app/);
+        const assignmentsResponse = await fetch('http://localhost:3001/assignments'));
         if (!assignmentsResponse.ok) {
           throw new Error('Failed to fetch assignments');
         }
@@ -72,7 +72,7 @@ function Admin() {
     e.preventDefault();
     try {
       // Send POST request to create new course
-      const response = await fetch(https://student-course-portal-seven.vercel.app/ {
+      const response = await fetch('http://localhost:3001/courses') {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -106,7 +106,7 @@ function Admin() {
     e.preventDefault();
     try {
       // Send POST request to create new assignment
-      const response = await fetch(https://student-course-portal-seven.vercel.app/', {
+      const response = await fetch('http://localhost:3001/assignments')/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -141,7 +141,7 @@ function Admin() {
     
     try {
       // Send DELETE request to remove course
-      const response = await fetch(https://student-course-portal-seven.vercel.app/${id}`, {
+      const response = await fetch('http://localhost:3001/courses')${id}`, {
         method: 'DELETE'
       });
 
@@ -164,7 +164,7 @@ function Admin() {
     
     try {
       // Send DELETE request to remove assignment
-      const response = await fetch(https://student-course-portal-seven.vercel.app/${id}`, {
+      const response = await fetch('http://localhost:3001/assignments')/${id}`, {
         method: 'DELETE'
       });
 
@@ -210,7 +210,7 @@ function Admin() {
       <ul className="nav nav-tabs mb-4">
         <li className="nav-item">
           <button 
-            className={`nav-link ${activeTab === 'courses' ? 'active' : ''}`}
+            className={`nav-link ${activeTab === 'courses' ? 'activ]e' : ''}`}
             onClick={() => setActiveTab('courses')}
           >
             Manage Courses
