@@ -1,131 +1,77 @@
-# 🎓 Student Course Portal
+#  Student Course Portal
 
-An interactive student course management system built with **React**, **React Router**, **Bootstrap**, and **JSON Server**.
-
-## 🚀 Live Demo
-
-👉 [View Presentation](./student_course_portal_presentation_with_backgrounds.html)
+The **Student Course Portal** is a dynamic web application built using React for the frontend and JSON Server for a mock REST API backend. It allows students to browse available courses, view assignments, and manage academic information seamlessly.
 
 ---
 
-## 📋 Features
+##  Live Demo
 
-- 📊 **Dashboard** with live stats and UI cards
-- 📚 **Courses Listing** with dynamic detail pages
-- 📝 **Assignments Page** with upload tracking
-- ⚙️ **Admin Panel** for course/assignment CRUD
-- 🌐 SPA using **React Router**
-- 🎨 Responsive design using **Bootstrap 5**
+ **Frontend (Vercel):** [https://student-course-portal-seven.vercel.app](https://student-course-portal-seven.vercel.app)
+
 
 ---
 
-## 🛠️ Technologies Used
+##  Features
 
-- React + Vite
-- React Router DOM
-- Bootstrap 5
-- Bootstrap Icons
-- JSON Server (Mock Backend)
-- Reveal.js (Presentation)
+-  View all available **courses**
+-  See course descriptions, instructors, schedules, and credit units
+- Browse **assignments** and check due dates
+-  View assignment details
+-  Navigate with a clean and responsive interface using React Router
+-  Admin route for adding/editing content (optional)
 
 ---
 
-## 📦 Folder Structure
+##  Technologies Used
 
-Student-Course-Portal/
-├── public/
+### Frontend
+- [React](https://reactjs.org/)
+- [React Router DOM](https://reactrouter.com/)
+- [Bootstrap](https://getbootstrap.com/) for styling
+- [Vercel](https://vercel.com/) for deployment
+
+
+---
+
+##  Folder Structure
+
+Student-Course-Portal-/
 ├── src/
-│ ├── components/
-│ ├── pages/
-│ │ ├── Dashboard.jsx
-│ │ ├── Courses.jsx
-│ │ ├── Assignments.jsx
-│ │ ├── Admin.jsx
-│ ├── App.jsx
-│ ├── main.jsx
-├── db.json
-├── README.md
-└── student_course_portal_presentation_with_backgrounds.html
-
-yaml
-Copy
-Edit
+│components/
+│  * Navbar.jsx
+│ pages/
+│ * Home.jsx
+│ * Courses.jsx
+│ * CourseDetail.jsx
+│ * Assignments.jsx
+│ *Admin.jsx
+│* App.jsx
+│ *index.js
+| public/
+│index.html
+├package.json
+└ README.md
 
 ---
 
-## 🧪 Getting Started
+## ⚙️ Getting Started Locally
 
-### 1. Clone the Repo
+### 1. Clone the Repositories
 
 ```bash
-git clone https://github.com/your-username/Student-Course-Portal.git
-cd Student-Course-Portal
-2. Install Dependencies
-bash
-Copy
-Edit
+# Frontend
+git clone https://github.com/automatebyte/Student-Course-Portal-.git
+cd Student-Course-Portal-
 npm install
-3. Start JSON Server
-bash
-Copy
-Edit
-npx json-server --watch db.json --port 5000
-4. Run the React App
-bash
-Copy
-Edit
-npm run dev
-Visit: http://localhost:5173
+npm run dev  [http://localhost:5173]
+npx json-server --watch db.json --port 3001
 
-🗂 Sample Data (db.json)
-json
-Copy
-Edit
-{
-  "courses": [
-    {
-      "id": 1,
-      "title": "React Basics",
-      "instructor": "Jane Doe",
-      "syllabus": "JSX, Components, State, Props",
-      "schedule": "Mon & Wed"
-    }
-  ],
-  "assignments": [
-    {
-      "id": 1,
-      "courseId": 1,
-      "title": "Build a ToDo App",
-      "status": "pending"
-    }
-  ]
-}
-🌍 Deployment (Optional)
-You can deploy this app on:
 
-Netlify
+###Author
+Group 5.
+## License
+MIT License
 
-Vercel
+HAPPY CODING!
 
-GitHub Pages (with a static export)
 
-📸 Screenshots
-Place your dashboard.png, courses.png, and admin.png images here in the README if using GitHub
-
-🤝 Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss your proposal.
-
-🧑 Author
-Njogu Simon
-GitHub: @NjoguSimon-hub
-
-📄 License
-This project is licensed under the MIT License.
-
-yaml
-Copy
-Edit
-
----
-
-Would you like me to save this as a downloadable `README.md` file for your project folder?
