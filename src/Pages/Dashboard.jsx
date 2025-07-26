@@ -28,7 +28,7 @@ function Dashboard() {
         setStudentData(studentData);
         
         // Get all available courses
-        const coursesResponse = await fetch('http://localhost:3001/courses'');
+        const coursesResponse = await fetch("https://student-course-api.onrender.com/courses")
         if (!coursesResponse.ok) {
           throw new Error('Failed to fetch courses');
         }
@@ -36,7 +36,8 @@ function Dashboard() {
         setCourses(coursesData);
         
         // Get all assignments
-        const assignmentsResponse = await fetch('http://localhost:3001/assignments');
+        const assignmentsResponse = await fetch("https://student-course-api.onrender.com/assignments")
+
         if (!assignmentsResponse.ok) {
           throw new Error('Failed to fetch assignments');
         }
