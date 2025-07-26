@@ -38,7 +38,8 @@ function Courses() {
       try {
         // Make API call to get all courses from our local JSON server
         // This assumes json-server is running on port 3001
-        const response = await fetch(http://localhost:3001/courses')p/);
+        const response = await fetch("https://student-course-api.onrender.com/courses")
+);
         
         // Check if the request was successful
         if (!response.ok) {
