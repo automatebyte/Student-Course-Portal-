@@ -49,7 +49,8 @@ function CourseDetail() {
       try {
         // Make API call to get specific course by ID from our local JSON server
         // Template literal (backticks) allows us to insert the ID into the URL
-        const response = await fetch(http://localhost:3001/courses')/${id}`);
+        const response = await fetch(`https://student-course-api.onrender.com/courses/${id}`)
+')/${id}`);
         
         // Check if the request was successful
         if (!response.ok) {
