@@ -13,7 +13,7 @@ function Dashboard() {
   const [loading, setLoading] = useState(true);         // Shows loading spinner
   const [error, setError] = useState(null);             // Stores any error messages
   
-  // useEffect runs when component loads - fetches all data from the server
+  // useEffect runs when the component loads - fetches all data from the server
   useEffect(() => {
     // Async function to fetch data from our mock JSON server
     const fetchData = async () => {
