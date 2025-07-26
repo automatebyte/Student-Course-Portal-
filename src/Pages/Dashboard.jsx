@@ -19,7 +19,8 @@ function Dashboard() {
     const fetchData = async () => {
       try {
         // Get student's personal information (ID = 1 for demo)
-        const studentResponse = await fetch('http://localhost:3001/students/1);
+        const studentResponse = await fetch(fetch("https://student-course-api.onrender.com/students")
+);
         if (!studentResponse.ok) {
           throw new Error('Failed to fetch student data');
         }
