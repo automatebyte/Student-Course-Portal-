@@ -40,7 +40,8 @@ function Admin() {
     const fetchData = async () => {
       try {
         // Fetch all courses from backend API
-        const coursesResponse = await fetch('http://localhost:3001/courses')
+        const coursesResponse = await fetch("https://student-course-api.onrender.com/students", { method: "POST", body: ... })
+)
         if (!coursesResponse.ok) {
           throw new Error('Failed to fetch courses');
         }
@@ -48,7 +49,8 @@ function Admin() {
         setCourses(coursesData);
 
         // Fetch all assignments from backend API
-        const assignmentsResponse = await fetch('http://localhost:3001/assignments'));
+        const assignmentsResponse = await fetch("https://student-course-api.onrender.com/students", { method: "POST", body: ... })
+
         if (!assignmentsResponse.ok) {
           throw new Error('Failed to fetch assignments');
         }
@@ -72,7 +74,8 @@ function Admin() {
     e.preventDefault();
     try {
       // Send POST request to create new course
-      const response = await fetch('http://localhost:3001/courses') {
+      const response = await fetch("https://student-course-api.onrender.com/students", { method: "POST", body: ... })
+
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -106,7 +109,8 @@ function Admin() {
     e.preventDefault();
     try {
       // Send POST request to create new assignment
-      const response = await fetch('http://localhost:3001/assignments')/', {
+      const response = await fetch("https://student-course-api.onrender.com/students", { method: "POST", body: ... })
+
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
