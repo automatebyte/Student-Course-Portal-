@@ -13,8 +13,8 @@ function Assignment() {
     const fetchData = async () => {
       try {
         const [assignmentRes, coursesRes] = await Promise.all([
-          fetch(`http://localhost:3001/assignments/${id}`),
-          fetch('http://localhost:3001/courses')
+          fetch(https://student-course-portal-seven.vercel.app/${id}`),
+          fetch(https://student-course-portal-seven.vercel.app/)
         ]);
 
         if (!assignmentRes.ok || !coursesRes.ok) {
@@ -39,7 +39,7 @@ function Assignment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3001/submissions', {
+      const response = await fetch(https://student-course-portal-seven.vercel.app/, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
