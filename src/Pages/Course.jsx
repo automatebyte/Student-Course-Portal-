@@ -14,7 +14,6 @@ import { Link } from 'react-router-dom';
  * 
  * State variables explained:
  * - courses: Array to store all course data from the server
-
  */
 function Courses() {
   // State to store the list of courses from the server
@@ -36,10 +35,8 @@ function Courses() {
     // We use async/await to handle the API call properly
     const fetchCourses = async () => {
       try {
-        // Make API call to get all courses from our local JSON server
-        // This assumes json-server is running on port 3001
-        const response = await fetch("https://student-course-api.onrender.com/courses")
-);
+        // ✅ FIXED: Correct backend URL + removed syntax error
+        const response = await fetch("https://student-course-api.onrender.com/courses");
         
         // Check if the request was successful
         if (!response.ok) {
