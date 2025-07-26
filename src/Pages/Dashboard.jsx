@@ -12,7 +12,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // ✅ Fixed: Corrected fetch URL
+        
         const studentResponse = await fetch("https://student-course-api.onrender.com/students");
         if (!studentResponse.ok) {
           throw new Error('Failed to fetch student data');
@@ -20,7 +20,7 @@ function Dashboard() {
         const studentData = await studentResponse.json();
         setStudentData(studentData);
 
-        // ✅ Fixed: Corrected fetch URL
+      
         const coursesResponse = await fetch("https://student-course-api.onrender.com/courses");
         if (!coursesResponse.ok) {
           throw new Error('Failed to fetch courses');
@@ -28,7 +28,7 @@ function Dashboard() {
         const coursesData = await coursesResponse.json();
         setCourses(coursesData);
 
-        // ✅ Fixed: Corrected fetch URL
+        
         const assignmentsResponse = await fetch("https://student-course-api.onrender.com/assignments");
         if (!assignmentsResponse.ok) {
           throw new Error('Failed to fetch assignments');
