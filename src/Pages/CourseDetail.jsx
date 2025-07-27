@@ -9,48 +9,41 @@ import { useParams } from 'react-router-dom';
  * 
  * This component:
  * 1. Gets the course ID from the URL (e.g., /courses/1 -> ID is 1)
- * 2. Fetches detailed course data from our JSON server
- * 3. Shows a loading spinner while data is being fetched
- * 4. Displays course information in a detailed card layout
- * 5. Handles errors if data fetching fails
- * 
- * URL Structure: /courses/:id
- * - :id is a parameter that gets passed to this component
- * - Example: /courses/1 will show details for course with ID 1
- * 
- * State variables explained:
- * - course: Object to store single course data from the server
- * - loading: Boolean to show/hide loading spinner
- * - error: String to store any error messages
+ * 2. Fetches detailed course data from your backend
+ * 3. Displays loading and error states
+ * 4. Renders full course information
  */
 function CourseDetail() {
-  // Extract the course ID from the URL parameters
+  // Get course ID from the route (e.g., /courses/:id)
   const { id } = useParams();
-  
-  // State to store the single course data from the server
+
+  // State to store course object
   const [course, setCourse] = useState(null);
   
-  // State to show loading spinner while fetching data
+  // State to track loading status
   const [loading, setLoading] = useState(true);
   
-  // State to store any error messages
+  // State to capture any fetch errors
   const [error, setError] = useState(null);
 
-  // useEffect runs when component loads or when ID changes
+  // Fetch course data on component mount or when ID changes
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        // ✅ Fixed fetch URL to use correct backend path
-        const response = await fetch(`https://student-course-api.onrender.com/courses/${id}`);
         
+        const response = await fetch(`https://student-course-api-3.onrender.com/courses/${id}`);
+        
+        // Throw an error if request fails
         if (!response.ok) {
           throw new Error('Failed to fetch course');
         }
-        
+
+        // Parse response and update state
         const data = await response.json();
         setCourse(data);
         setLoading(false);
       } catch (err) {
+        // Handle fetch errors
         setError(err.message);
         setLoading(false);
       }
@@ -59,6 +52,7 @@ function CourseDetail() {
     fetchCourse();
   }, [id]);
 
+  // Show loading spinner while data is being fetched
   if (loading) {
     return (
       <div className="container mt-4 text-center">
@@ -69,6 +63,7 @@ function CourseDetail() {
     );
   }
 
+  // Show error alert if fetch fails
   if (error) {
     return (
       <div className="container mt-4">
@@ -79,6 +74,7 @@ function CourseDetail() {
     );
   }
 
+  // Main detailed view layout
   return (
     <div className="container mt-4">
       <div className="card">
