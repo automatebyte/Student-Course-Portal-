@@ -91,10 +91,10 @@ function Dashboard() {
               </div>
               {studentData && (
                 <>
-                  <p><strong>Name:</strong> {studentData.name}</p>
-                  <p><strong>ID:</strong> {studentData.studentId}</p>
-                  <p><strong>Program:</strong> {studentData.program}</p>
-                  <p><strong>Year:</strong> {studentData.year}</p>
+                  <p><strong>Name:</strong> {studentData?.name || 'Loading ...'}</p>
+                  <p><strong>ID:</strong> {studentData?.studentId || 'Loading ...'}</p>
+                  <p><strong>Program:</strong> {studentData?.program || 'Loading ...'}</p>
+                  <p><strong>Year:</strong> {studentData?.year || 'Loading ...'}</p>
                   <p><strong>GPA:</strong> <span className="badge bg-primary">{studentData.gpa}</span></p>
                 </>
               )}
