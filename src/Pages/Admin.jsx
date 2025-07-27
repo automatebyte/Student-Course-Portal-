@@ -28,12 +28,12 @@ function Admin() {
     // Fetch courses and assignments
     const fetchData = async () => {
       try {
-        const coursesResponse = await fetch("https://student-course-api.onrender.com/courses");
+        const coursesResponse = await fetch("https://student-course-api-3.onrender.com/courses");
         if (!coursesResponse.ok) throw new Error('Failed to fetch courses');
         const coursesData = await coursesResponse.json();
         setCourses(coursesData);
 
-        const assignmentsResponse = await fetch("https://student-course-api.onrender.com/assignments");
+        const assignmentsResponse = await fetch("https://student-course-api-3.onrender.com/assignments");
         if (!assignmentsResponse.ok) throw new Error('Failed to fetch assignments');
         const assignmentsData = await assignmentsResponse.json();
         setAssignments(assignmentsData);
@@ -48,10 +48,11 @@ function Admin() {
     fetchData();
   }, []);
 
+  // Handle course submission
   const handleCourseSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://student-course-api.onrender.com/courses", {
+      const response = await fetch("https://student-course-api-3.onrender.com/courses", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newCourse)
@@ -75,10 +76,11 @@ function Admin() {
     }
   };
 
+  // Handle assignment submission
   const handleAssignmentSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://student-course-api.onrender.com/assignments", {
+      const response = await fetch("https://student-course-api-3.onrender.com/assignments", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newAssignment)
@@ -101,11 +103,12 @@ function Admin() {
     }
   };
 
+  // Delete course by ID
   const deleteCourse = async (id) => {
     if (!window.confirm('Are you sure you want to delete this course?')) return;
 
     try {
-      const response = await fetch(`https://student-course-api.onrender.com/courses/${id}`, {
+      const response = await fetch(`https://student-course-api-3.onrender.com/courses/${id}`, {
         method: 'DELETE'
       });
 
@@ -118,11 +121,12 @@ function Admin() {
     }
   };
 
+  // Delete assignment by ID
   const deleteAssignment = async (id) => {
     if (!window.confirm('Are you sure you want to delete this assignment?')) return;
 
     try {
-      const response = await fetch(`https://student-course-api.onrender.com/assignments/${id}`, {
+      const response = await fetch(`https://student-course-api-3.onrender.com/assignments/${id}`, {
         method: 'DELETE'
       });
 
@@ -135,6 +139,7 @@ function Admin() {
     }
   };
 
+  // Show loading spinner
   if (loading) {
     return (
       <div className="container mt-4 text-center">
@@ -143,6 +148,7 @@ function Admin() {
     );
   }
 
+  // Show error message
   if (error) {
     return (
       <div className="container mt-4">
