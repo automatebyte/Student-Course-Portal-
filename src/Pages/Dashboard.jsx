@@ -12,30 +12,25 @@ function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        
-        const studentResponse = await fetch("https://student-course-api.onrender.com/students");
-        if (!studentResponse.ok) {
-          throw new Error('Failed to fetch student data');
-        }
+        // Fetch student data
+        const studentResponse = await fetch("https://student-course-api-3.onrender.com/students");
+        if (!studentResponse.ok) throw new Error('Failed to fetch student data');
         const studentData = await studentResponse.json();
         setStudentData(studentData);
 
-      
-        const coursesResponse = await fetch("https://student-course-api.onrender.com/courses");
-        if (!coursesResponse.ok) {
-          throw new Error('Failed to fetch courses');
-        }
+        // Fetch courses
+        const coursesResponse = await fetch("https://student-course-api-3.onrender.com/courses");
+        if (!coursesResponse.ok) throw new Error('Failed to fetch courses');
         const coursesData = await coursesResponse.json();
         setCourses(coursesData);
 
-        
-        const assignmentsResponse = await fetch("https://student-course-api.onrender.com/assignments");
-        if (!assignmentsResponse.ok) {
-          throw new Error('Failed to fetch assignments');
-        }
+        // Fetch assignments
+        const assignmentsResponse = await fetch("https://student-course-api-3.onrender.com/assignments");
+        if (!assignmentsResponse.ok) throw new Error('Failed to fetch assignments');
         const assignmentsData = await assignmentsResponse.json();
         setAssignments(assignmentsData);
 
+        // Calculate stats
         const today = new Date();
         const upcomingAssignments = assignmentsData.filter(assignment => {
           const dueDate = new Date(assignment.dueDate);
@@ -46,7 +41,7 @@ function Dashboard() {
           coursesEnrolled: coursesData.length,
           assignmentsPending: upcomingAssignments.length,
           upcomingDeadlines: upcomingAssignments.length,
-          attendanceRate: 0
+          attendanceRate: 0 // Placeholder value
         });
 
         setLoading(false);
@@ -84,6 +79,7 @@ function Dashboard() {
       <h2 className="mb-4 fw-bold text-primary animate-fade-in">Student Dashboard</h2>
 
       <div className="row mt-4">
+        {/* Student Profile Card */}
         <div className="col-md-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
           <div className="card">
             <div className="card-body">
@@ -106,6 +102,7 @@ function Dashboard() {
           </div>
         </div>
 
+        {/* Stats Cards */}
         <div className="col-md-8">
           <div className="row">
             <div className="col-md-6 mb-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -161,6 +158,7 @@ function Dashboard() {
         </div>
       </div>
 
+      {/* Recent Courses Table */}
       <div className="row mt-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
         <div className="col-12">
           <div className="card">
