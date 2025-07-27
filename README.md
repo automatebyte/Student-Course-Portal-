@@ -54,7 +54,6 @@ Student-Course-Portal-/
 
 ---
 
-## ⚙️ Getting Started Locally
 
 ### 1. Clone the Repositories
 
