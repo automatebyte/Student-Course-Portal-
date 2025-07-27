@@ -9,8 +9,8 @@ function Assignments() {
   useEffect(() => {
     const fetchAssignments = async () => {
       try {
-        
-        const response = await fetch('https://student-course-api.onrender.com/assignments');
+        // Updated API URL to point to deployed backend
+        const response = await fetch('https://student-course-api-3.onrender.com/assignments');
         if (!response.ok) throw new Error('Failed to fetch assignments');
         const data = await response.json();
         setAssignments(data);
