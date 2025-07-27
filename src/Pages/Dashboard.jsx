@@ -91,11 +91,11 @@ function Dashboard() {
               </div>
               {studentData && (
                 <>
-                  <p><strong>Name:</strong> {studentData?.name || 'Loading ...'}</p>
-                  <p><strong>ID:</strong> {studentData?.studentId || 'Loading ...'}</p>
-                  <p><strong>Program:</strong> {studentData?.program || 'Loading ...'}</p>
-                  <p><strong>Year:</strong> {studentData?.year || 'Loading ...'}</p>
-                  <p><strong>GPA:</strong> <span className="badge bg-primary">{studentData.gpa}</span></p>
+                  <p><strong>Name:</strong> {studentData?.name || 'Lurambi Nwendazake'}</p>
+                  <p><strong>ID:</strong> {studentData?.studentId || 'STD12345'}</p>
+                  <p><strong>Program:</strong> {studentData?.program || 'Computer Science'}</p>
+                  <p><strong>Year:</strong> {studentData?.year || '3'}</p>
+                  <p><strong>GPA:</strong> <span className="badge bg-primary">{studentData?.gpa || '3.7'}</span></p>
                 </>
               )}
             </div>
